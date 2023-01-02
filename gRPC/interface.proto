@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package temp;
+
+option go_package = "https://github.itu.dk/sibh/temp";
+
+service Increment {
+  rpc increment (IncrementRequest) returns (IncrementReply){}
+}
+
+message IncrementRequest {
+}
+
+message IncrementReply {
+  int32 value = 1;
+}
